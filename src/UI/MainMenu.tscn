@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/UI/MainMenu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 272.0
+margin_right = 448.0
+margin_bottom = 336.0
+rect_pivot_offset = Vector2( -640, -336 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayButton"]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 56.0
+mouse_filter = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 376.0
+margin_right = 448.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( -640, -336 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="QuitButton"]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 56.0
+mouse_filter = 2
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
